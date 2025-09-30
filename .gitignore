@@ -1,0 +1,11 @@
+figures
+output
+original
+legacy
+functions
+test
+ITURDigitalMaps.tar.gz
+*.mat
+*.asv
+*.kate-swp
+.directory
