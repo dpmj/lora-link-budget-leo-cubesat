@@ -1,10 +1,10 @@
-# Link Budget of a LoRa communications system in Low Earth Orbit (LEO)
+# Link Budget of a LoRa communications system in a CubeSat in Low Earth Orbit (LEO)
 
-This repository contains the MatLab source files for simulating a LoRa communications system in Low Earth Orbit (LEO). This code is part of my Master's thesis in telecommunications engineering from the Polytechnic University of Valencia in Spain (2024). The project's hardware design files are in this repository: [Hardware design of a LoRa Gateway and in-orbit computing payload for CubeSat.](https://github.com/dpmj/masters-thesis-lora-gateway-compute-module-cubesat-payload-pcb/).
+This repository contains the MatLab source files for simulating the link budget of a LoRa communications system in a CubeSat in Low Earth Orbit (LEO). This code is part of my Master's thesis in telecommunications engineering from the Polytechnic University of Valencia in Spain (2024). The project's hardware design files are in this repository: [Hardware design of a LoRa Gateway and in-orbit computing payload for CubeSat.](https://github.com/dpmj/masters-thesis-lora-gateway-compute-module-cubesat-payload-pcb/).
 
 ## Files included in this repository:
 
-- `lora_lb_base.m` provides a complete link budget and computes access intervals, azimuth, elevation, range, latency, Doppler frequency shift, FSPL losses, atmospheric losses, received power, and CNR in a sweep of orbit altitudes.
+- `lora_lb_base.m` provides a complete link budget: computes access intervals, azimuth, elevation, range, latency, Doppler frequency shift, FSPL losses, atmospheric losses, received power, and CNR in a sweep of orbit altitudes.
 - `lora_lb_pfd.m` is a variant that establishes a power flux density limit on Earth. This script only calculates the received power and the carrier-to-noise ratio.
 - `lora_lb_doppler_rate.m` computes the Doppler rate for LoRa packages and symbols for various spreading factors and orbit altitudes.
 - `lora_lb_doppler_rate_pktsize.m` computes the Doppler rate for LoRa packages only, for several spreading factors and orbit altitudes, sweeping the size of the LoRa packet.
@@ -26,14 +26,24 @@ The code is comprehensively commented. However, the results are specific to the 
 }
 ```
 
-# Example results
+## Example results
+
+### Received power
 
 ![](example-figures/rxpwr.svg)
 
+### Power Flux Density (PFD)
+
 ![](example-figures/pfd.svg)
+
+### Carrier-to-Noise Ratio (CNR)
 
 ![](example-figures/cnr.svg)
 
+### Latency and Doppler frequency shift
+
 ![](example-figures/latency_doppler_shift.svg)
+
+### Doppler rate
 
 ![](example-figures/doppler_rate.svg)
